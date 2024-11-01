@@ -196,7 +196,10 @@ public class CourseManagement {
 
     public static boolean isAlpah(String n){
         for(int i = 0; i<n.length(); i++){
-            if (!Character.isLetter(n.charAt(i))){
+            if (n.charAt(i) == ' '){
+                continue;
+            }
+            else if (!Character.isLetter(n.charAt(i))){
                 return false;
             }
         }
